@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+        
+        <header> 
+            <h1> Anytime is Train Time </h1>
+            <h3> Choo Choo. Chee Chee. </h3>
+        </header>
+
+        <table style = "width: 100%; border: 2px solid black">
+            <p class = "title"> Current Train Schedule </p>
+            <tr>
+                <th> Train Time </th>
+                <th> Destination </th>
+                <th> Frequency (min) </th>
+                <th> Next Arrival </th>
+            </tr>
+
+        </table>
+
+        <form>
+            <p class = "title"> Add Train </p>
+            <p> Train Name </p>
+            <input type = "text" id = "name">
+
+            <p> Destination </p>
+            <input type = "text" id = "destination">
+
+            <p> First Train Time (HH:mm - military time) </p>
+            <input type = "text" id = "time">
+
+            <p> Frequency (min) </p>
+            <input type = "text" id = "frequency">
+
+            <button type="Submit"> Submit </button>
+        </form>
+
+    </body>
+</html>
