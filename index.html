@@ -8,7 +8,6 @@
         <link href="assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="assets/javascript/game.js"></script>
 
 
         <script>
@@ -23,33 +22,47 @@
             <h3> Choo Choo. Chee Chee. </h3>
         </header>
 
-        <table style = "width: 100%; border: 2px solid black">
-            <p class = "title"> Current Train Schedule </p>
+        <table style = "width: 93%; border: 2px solid black">
+            <h4> Current Train Schedule </h4>
             <tr>
-                <th> Train Time </th>
+                <th> Train Name </th>
                 <th> Destination </th>
                 <th> Frequency (min) </th>
                 <th> Next Arrival </th>
+                <th> Minutes away </th>
             </tr>
+            <div id = "others">
+                
+            </div>
+
+
 
         </table>
 
         <form>
-            <p class = "title"> Add Train </p>
+            <p id = "formtitle"> Add Train </p>
             <p> Train Name </p>
-            <input type = "text" id = "name">
+            <input type = "text" id = "name" placeholder = "ABC train">
 
             <p> Destination </p>
-            <input type = "text" id = "destination">
+            <input type = "text" id = "destination" placeholder = "City">
 
             <p> First Train Time (HH:mm - military time) </p>
-            <input type = "text" id = "time">
+            <input type = "time" id = "time">
 
             <p> Frequency (min) </p>
-            <input type = "text" id = "frequency">
+            <input type = "number" id = "frequency">
 
-            <button type="Submit"> Submit </button>
+            <br /> 
+            <button type="button" id = "submit">Submit</button>
+
         </form>
+
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="assets/javascript/app.js"></script>
+
+
 
     </body>
 </html>
