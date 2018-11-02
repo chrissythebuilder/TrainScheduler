@@ -16,9 +16,11 @@ var database = firebase.database();
 
 var name = "";
 var destination = "";
-var nextArrival = "";
 var frequency = "";
-// var minutesAway = "";
+var nextArrival = "hh:mm";
+var minutesAway = "";
+var convertedTime = moment(time);
+
 
 // Database Ref
 
@@ -27,37 +29,55 @@ $("#submit").on("click", function () {
     
     name = $("#name").val().trim();
     destination = $("#destination").val().trim();
-    nextArrival = $("#time").val().trim();
     frequency = $("#frequency").val().trim();
-    // minutesAway = moment
-
-    console.log(name);
-    console.log(destination);
-    console.log(nextArrival);
-    console.log(frequency);
-    // console.log(minutesAway);
+    nextArrival = $("#time").val().trim();
+    // moment JS
+    // minutesAway = $("#frequency").val().trim();
 
     var newInfo = {
         newName: name,
         newDestination: destination,
-        newArrival: nextArrival,
         newFrequency: frequency,
-        // newMinutes: minutesAWay;
-    }
+        newArrival: nextArrival,
+        // newMinutes: minutesAWay,
+    };
 
     database.ref().push(newInfo);
 
+    console.log(name);
+    console.log(destination);
+    console.log(frequency);
+    console.log(nextArrival);
+    // console.log(minutesAway);
 
-    // var addList = $("<td>" + name + "</td> <td>" + destination + "</td> <td>" + frequency + "</td> <td>" + nextArrival + "</td>");
+    $("#name").val("");
+    $("#destination").val("");
+    $("#frequency").val("");
+    $("#time").val("");
+    // $("#time").val("");
 
-    // var section = $("<tr>")
-    // section.append(addList);
+});
 
-    // var a = $("#others").html(addList);
-    // a.append(addList);
+    database.ref().on("child_added", function(childSnapshot) {
+        console.log(childSnapshot.val());
+
+        var name = childSnapshot.val().newName;
+
+
+        var nextRow = $("<tr>").append(
+            $("<td>").text(name),
+            $("<td>").text(destination),
+            $("<td>").text(frequency),
+            $("<td>").text(nextArrival),
+            // $("<td>").text(minutesAway),
+        )
+
+        $("#train-table > tbody").append(nextRow);
+
+
+    })
 
     
-});
 
 
 

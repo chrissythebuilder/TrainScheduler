@@ -49,6 +49,11 @@ table {
 
 /* Page Style Loads Here */
 
+body {
+	margin: 50px;
+	font-family: 'Cabin', sans-serif;
+}
+
 header {
 	background-color: burlywood;
 	text-align: center;
@@ -73,16 +78,14 @@ input {
 }
 
 table {
-	margin: 0 50px;
 	position: relative;
 }
 
 h4 {
 	background-color: peru;
-	margin-left: 50px;
-	margin-right: 50px;
-	padding: 5px;
+	padding: 10px 10px;
 	font-weight: 700;
+	border-top: 3px solid saddlebrown;
 }
 
 form {
