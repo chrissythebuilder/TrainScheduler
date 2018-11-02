@@ -50,6 +50,7 @@ table {
 /* Page Style Loads Here */
 
 body {
+	background: cadetblue;
 	margin: 50px;
 	font-family: 'Cabin', sans-serif;
 }
@@ -79,6 +80,15 @@ input {
 
 table {
 	position: relative;
+	background: white;
+}
+
+tr th {
+	border: 3px solid black;
+}
+
+tr td {
+	border: 3px solid black;
 }
 
 h4 {
@@ -91,6 +101,7 @@ h4 {
 form {
 	margin: 70px;
 	border: 2px solid saddlebrown;
+	background: wheat
 }
 
 #formtitle {
