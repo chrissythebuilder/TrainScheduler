@@ -7,21 +7,15 @@
         <title></title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin|Baloo+Bhaijaan" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-        
 
-
-        <script>
-            
-        </script>
     </head>
 
-    <body>
-        
+    <body>        
         <header> 
-            <h1> Anytime is Train Time </h1>
-            <h3> Choo Choo. Chee Chee. </h3>
+            <h1> 🚂 Anytime is Train Time 🚂</h1>
+            <h3> Choo Choo. Chee Chee. All Aboard! </h3>
         </header>
 
         <table id = "train-table" style = "width: 100%; border: 2px solid saddlebrown">
@@ -35,9 +29,8 @@
                 <th> Minutes away </th>
             </tr>
             </thead>
-            <tbody>
 
-            </tbody>
+            <tbody> </tbody>
 
         </table>
 
@@ -49,7 +42,7 @@
             <p> Destination </p>
             <input type = "text" id = "destination" placeholder = "City">
 
-            <p> First Train Time (HH:mm - military time) </p>
+            <p> First Train Time (HH:mm - military time / 24-hour format) </p>
             <input type = "text" id = "time">
 
             <p> Frequency (min) </p>
@@ -57,8 +50,8 @@
 
             <br /> 
             <button type="button" id = "submit">Submit</button>
-
         </form>
+
 
         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
