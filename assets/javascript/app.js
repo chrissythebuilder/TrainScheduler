@@ -78,28 +78,31 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     var remainder;
 
     if (maxTime === trainTime) {
-        minutes = trainTime.diff(moment(), "minutes");
+        console.log("not working");
         newArrival = trainTime.format("hh:mm A");
+        minutes = trainTime.diff(moment(), "minutes");
+        
     } else {
         console.log(newFrequency);
 
-        difference = moment().diff(trainTime, "minutes");
+        var difference = moment().diff(trainTime, "minutes");
         console.log(difference);
 
-        remainder = newFrequency % difference; 
+        var remainder = difference % newFrequency; 
         console.log(remainder);
 
         minutes = newFrequency - remainder;
+        console.log("after: " + minutes)
 
         newArrival = moment().add(minutes, "m").format("hh:mm A");
     }
 
     console.log(minutes);
-    console.log(newArrival);
-    console.log(newFrequency);
-    console.log(difference);
-    console.log(remainder);
-    console.log("Minutes: ", minutes);
+    // console.log(newArrival);
+    // console.log(newFrequency);
+    // console.log(difference);
+    // console.log(remainder);
+    // console.log("Minutes: ", minutes);
     console.log("Arrival: ", newArrival)
 
 
